@@ -1,0 +1,12 @@
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\bin\Debug\net8.0\CodeWebsite.Library.deps.json
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\bin\Debug\net8.0\CodeWebsite.Library.dll
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\bin\Debug\net8.0\CodeWebsite.Library.pdb
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.AssemblyInfoInputs.cache
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.AssemblyInfo.cs
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.csproj.CoreCompileInputs.cache
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.dll
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\refint\CodeWebsite.Library.dll
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.pdb
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\ref\CodeWebsite.Library.dll
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWebsite.Library\obj\Debug\net8.0\CodeWebsite.Library.csproj.AssemblyReference.cache

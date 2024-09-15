@@ -1,0 +1,74 @@
+﻿<!-- Test Completed View -->
+@model CodeWebsiteProject.Test
+
+@{
+    ViewData["Title"] = "Test Completed";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #ffdfe5; 
+            color: #333; 
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+        }
+
+        /* Styling for the container holding the content */
+        .container {
+            max-width: 800px; /* Maximum width of the container */
+            margin: 50px auto; /* Center align the container with top/bottom margin */
+            padding: 20px; /* Padding inside the container */
+            background-color: #f1ebeb; 
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 1); /* Shadow effect */
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            color: #4a4e69; 
+            font-size: 2.5em; 
+        }
+
+        /* Styling for paragraphs */
+        p {
+            font-size: 1.2em; 
+            margin: 20px 0; /* Margin around the paragraph */
+        }
+
+        /* Styling for buttons */
+        .btn {
+            padding: 10px 30px; /* Padding inside the button */
+            background-color: #89023e; 
+            color: white; 
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.2em; 
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth background color transition */
+        }
+
+        /* Hover effect for buttons */
+        .btn:hover {
+            background-color: #c94c70; /* Lighter red color on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Heading indicating test completion -->
+    <h1>Test Completed!</h1>
+    <!-- Message congratulating the user and guiding them to return to the main menu -->
+    <p>Congratulations, you have completed the test. Click the button below to return to the main menu.</p>
+    <!-- Button to return to the main menu -->
+    <a href="@Url.Action("Index", "MainMenu")" class="btn">Return to Main Menu</a>
+</div>
+</body>
+</html>

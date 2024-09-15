@@ -1,0 +1,66 @@
+﻿@model CodeWebsiteProject.Quiz
+
+@{
+    ViewData["Title"] = "Quiz Completed";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Quiz Completed</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #ffdfe5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f1ebeb;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+        }
+        /* Heading styling */
+        h1 {
+            color: #89023e;
+        }
+
+        p {
+            font-size: 1.0em;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            background-color: #89023e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #c94c70;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--Button that returns to main menu after all quiz question are completed -->
+    <h1>Quiz Completed!</h1>
+    <p>You've reached the end of the quiz. Press the button below to return to the main menu to take the test.</p>
+    <a href="@Url.Action("Index", "MainMenu")" class="btn">Return to Main Menu</a>
+</div>
+</body>
+</html>

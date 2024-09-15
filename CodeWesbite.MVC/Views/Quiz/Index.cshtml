@@ -1,0 +1,154 @@
+﻿@model CodeWebsiteProject.Quiz
+
+@{
+    ViewData["Title"] = "Quizzes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* Header styling */
+        h1{
+            color: #4a4e69;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            }
+        /* Body styling */
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #ffdfe5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+        }
+        /* Header styling */
+        header {
+            background-color: #ffffff;
+            color: #89023e;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f1ebeb;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        
+        }
+
+        .quiz-option {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .quiz-option li {
+            margin-bottom: 15px;
+        }
+
+        .quiz-list a {
+            color: #4a4e69;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px;
+            display: block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .quiz-option a:hover {
+            background-color: #facbdb;
+        }
+        form {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #89023e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.0em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            /*background-color: #deb3fe;
+            color: #333;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 1.0em;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            flex-direction: column;*/
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+        button:hover {
+            background-color: #d32e7e;
+        }
+        /* Feedback styling */
+        .feedback {
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .feedback p {
+            font-size: 1.0em;
+        }
+
+        .feedback p.correct {
+            color: green;
+        }
+
+        .feedback p.incorrect {
+            color: red;
+        }
+    </style>
+    <div class="container">
+        <h1>@Model.Question</h1>
+        <!-- Check if there is any feedback to display -->
+        @if (ViewBag.Feedback != null)
+        {
+            <div class="feedback">
+                <!-- Display the feedback message with appropriate styling based on the feedback class -->
+                <p class="@ViewBag.FeedbackClass">@ViewBag.Feedback</p>
+            </div>
+        }
+        <!-- Form for submitting the quiz answer -->     
+        <form asp-action="SubmitAnswer" method="post">
+            <!-- Hidden field to pass the question index to the server -->
+            <input type="hidden" name="questionIndex" value="@ViewData["QuestionIndex"]"/>
+            <!-- Loop through each option and create a radio button for each -->
+            @for (int i = 0; i < Model.Options.Length; i++)
+            {
+                <div class="quiz-option">
+                    <!-- Radio button for selecting an answer -->
+                    <input type="radio" name="selectedChoice" value="@i" id="option-@i"/>
+                    <!-- Label for the radio button -->
+                    <label for="option-@i">@Model.Options[i]</label>
+                </div>
+            }
+            <br/>
+            <!-- Submit button to send the selected answer -->
+            <button type="submit">Submit Answer</button>
+
+        </form>
+        
+    </div>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>

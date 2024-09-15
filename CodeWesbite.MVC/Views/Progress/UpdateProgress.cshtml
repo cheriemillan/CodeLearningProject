@@ -1,0 +1,56 @@
+﻿@model CodeWebsiteProject.Progress
+
+@{
+    ViewData["Title"] = "Update Progress";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Update Progress</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Update Progress</h1>
+    <!-- Form to update progress details -->
+    <form asp-action="UpdateProgressToDatabase" method="post">
+        <!-- Input field for User ID (read-only) -->
+        <div class="form-group">
+            <label asp-for="UserId">User ID</label>
+            <input asp-for="UserId" readonly/>
+        </div>
+        <!-- Input field for Lessons Completed -->
+        <div class="form-group">
+            <label asp-for="LessonsCompleted">Lessons Completed</label>
+            <input asp-for="LessonsCompleted"/>
+        </div>
+        <!-- Submit button to update progress -->
+        <button type="submit" class="btn">Update</button>
+    </form>
+    <!-- Button to view progress details -->
+    <a href="@Url.Action("GetProgress", new { userId = Model.UserId })" class="btn">Back to Progress</a>
+</div>
+<div>
+      
+</div>
+</body>
+</html>

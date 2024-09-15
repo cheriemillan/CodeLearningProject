@@ -1,0 +1,63 @@
+﻿<!-- View for showing a message when all lessons are completed -->
+@model CodeWebsiteProject.Lesson
+@{
+    ViewData["Title"] = "All Lessons Completed";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Lessons Completed</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #ffdfe5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        /* Container styling for the message */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f1ebeb;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+        }
+
+        h1 {
+            color: #89023e;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+        /* Button styling */
+        .btn {
+            padding: 10px 30px;
+            background-color: #694a64;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #6a6f85;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- My button that return to the index of main menu-->
+    <h1>Lesson Completed!</h1>
+    <p>You finished the lesson. Press the button below to return to the main menu to either finish the next lesson or to take the quiz.</p>
+    <a href="@Url.Action("Index", "MainMenu")" class="btn">Return to Main Menu</a>
+</div>
+</body>
+</html>

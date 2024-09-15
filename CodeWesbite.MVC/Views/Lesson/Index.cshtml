@@ -1,0 +1,83 @@
+﻿<!-- View the list of lessons -->
+@model List<CodeWebsiteProject.Lesson>
+
+@{
+    ViewData["Title"] = "Lessons";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #ffdfe5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #f1ebeb;
+            color: #89023e;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Container styling for the lesson list */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f1ebeb;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        
+        }
+
+        .lesson-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lesson-list li {
+            margin-bottom: 15px;
+        }
+
+        .lesson-list a {
+            color: #4a4e69;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px;
+            display: block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lesson-list a:hover {
+            background-color: #facbdb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="lesson-list">
+            
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                // Generate a link for each lesson in the model's list
+                // The link directs to the ViewLesson action of the Lesson controller
+                // with the current lesson index as a route parameter
+                <a href="@Url.Action("ViewLesson", "Lesson", new { lessonIndex = i })">
+                    @Model[i].Title <!-- Displays the title -->
+
+                </a>
+            }
+        </ul>
+           
+    </div>
+</body>
+</html>

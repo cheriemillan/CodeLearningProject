@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* Sets background color and text color for main section */
+    main {
+        background-color: #ffd9da; 
+        color: #89023e;
+}
+    /* CSS for a light pastel theme */
+body {
+    
+    font-family: Ravensara Sans, sans-serif;
+    background-color: #ffd9da;
+    color: #333;
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}  
+    header {
+        background-color: #ffffff;
+        color: #e7e5e6;
+        padding: 20px;  /* Adds padding to the header */
+        text-align: center;
+    }
+
+    h1 {
+
+        color: #4a4e69;
+        font-size: 2.5em;
+        margin-bottom: 20px; /* Adds space below the heading */
+    }
+    
+    h3 {
+        color: #9a8c98;
+        font-size: 1.8em;
+        margin-bottom: 15px; /* Adds space below sub-headings */
+    }
+
+    p {
+        color: #22223b;
+        font-size: 1.2em;
+    }
+
+
+    .container {
+        max-width: 1200px;  /* Restricts the maximum width of the container */
+        margin: 0 auto; /* Centers the container */
+    }
+    
+    .btn-primary {
+        background-color: #deb3fe;
+        color: #333;
+        padding: 15px 30px; /* Adds padding to the button */
+        text-decoration: none; /* Removes underline from button text */
+        font-size: 1.4em;
+        border-radius: 40px;  /* Rounds the edges of the button */
+        transition: background-color 0.3s ease; /* Adds smooth transition effect on hover */
+    }
+
+    .btn-primary:hover {
+        background-color: #e7c6fe;
+    }   
+
+    section {
+        padding: 30px;
+        border-radius: 15px;
+        background-color: #f4e4ec;
+        box-shadow: 0px 10px 30px rgba(1, 0, 0, 1); /* Adds shadow effect */
+    }
+
+    .row {
+        margin-top: 30px; /* Adds space above the row */
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .col-md-4 {
+        margin-bottom: 30px; /* Adds space below each column */
+    } 
+    
+</style>
+
+<main>
+    <section>
+        <!-- Title of the home page -->
+        <div class="text-center">
+            <h1 class="display-4">For The Love of Code</h1>
+            <!-- Introduction paragraph -->
+            <p><br/>Coding is hard, but understanding coding the core concepts makes it easier. Here we will help you understand the core concepts of coding to get you ready to code!</p>
+        </div>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class=" col-md-4">
+                    <!-- First feature section: Lessons -->
+                    <h3>Interactive Lessons</h3>
+                    <p>Learn in depth lessons to build a strong foundation of your coding knowledge.</p>
+                </div>
+                <div class="col-md-4">
+                    <!-- Second feature section: Quizzes and Tests -->
+                    <h3>Quizzes and Tests</h3>
+                    <p>Test your knowledge quizzes after you complete a section of a lesson then a test by the end of the lesson.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Track Your Progress</h3>
+                    <p>Keep track of your achievements and see how far you've come after each step.</p>
+                </div>
+                <div class="align-content-md-center">
+                    <br>
+                    <!-- Call to action section: Get Started Button -->
+                    <h3><strong>Start your coding learning journey with us today!</strong></h3>
+                    <br>
+                    <div style="display: block">
+                        <!-- Button redirects to MainMenu -->
+                        <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "MainMenu")">Get Started</a>
+                    </div>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+

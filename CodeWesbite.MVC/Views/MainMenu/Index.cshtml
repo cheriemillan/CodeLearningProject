@@ -1,0 +1,114 @@
+﻿<!-- View for the main menu -->
+@model CodeWesbite.MVC.Controllers.MainMenuController
+
+@{
+    ViewData["Title"] = "Main Menu";
+        
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Welcome to the Main Menu Platform</title>
+    <style>
+        /* General body styling */
+        main {
+            background: #ffd9da;
+            color:  #89023e;
+            }
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #ffd9da;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            color: #4a4e69;
+            font-size: 1.0em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        /* Main heading styling */
+        h1 {
+            color: #4a4e69;
+            margin-bottom : 20px;
+            font-size: 2.5em;
+        }
+        h3{
+            color: #9a8c98;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #22223b;
+            font-size : 1.2em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .btn-primary {
+            background-color: #deb3fe;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.4em;
+            border-radius: 40px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #e7c6fe;
+        }
+        section {
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #f4e4ec;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
+        }
+        .row {
+            margin-top: 30px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .col-md-16 {
+            margin-bottom: 30px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+<main>
+    <section>
+        <div class="text-center">
+            <h1>Welcome to the Main Menu</h1>
+        </div>
+        <body>
+        <!-- Made buttons for lessons, quizzes, and tests that will lead to the mainmenu then to their specific index -->
+        <p>Please select an option below to get started with lessons, quizzes, or tests</p>
+        <div class="container">
+            <div class="row text-center btn-container">
+                <div class="col-md-16">
+                    <a class="btn btn-primary btn-lg" href="@Url.Action("GoToLessons", "MainMenu")">Lessons</a>
+                </div>
+                <div class="col-md-16">
+                    <a class="btn btn-primary btn-lg" href="@Url.Action("GoToQuizzes", "MainMenu")">Quizzes</a>
+                </div>
+                <div class="col-md-16">
+                    <a class="btn btn-primary btn-lg" href="@Url.Action("GoToTests", "MainMenu")">Tests</a>
+                </div>
+            </div>
+            
+        </div>
+
+        </body>
+    </section>
+</main>
+</html>

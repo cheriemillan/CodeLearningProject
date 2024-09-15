@@ -1,0 +1,61 @@
+﻿@using Org.BouncyCastle.Crypto.Engines
+@model CodeWebsiteProject.Progress
+
+@{
+    ViewData["Title"] = "Progress Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Progress Details</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Heading styling */
+        h1 {
+            color: #333;
+        }
+        .progress-info {
+            margin-bottom: 20px;
+        }
+        .progress-info label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Progress Details</h2>
+    <!-- Display user progress information -->
+    <div class="progress-info">
+        <!-- Label and user ID information -->
+        <label>User ID:</label>
+        <p>@Model.UserId</p>
+    </div>
+    <div class="progress-info">
+        <!-- Label and number of completed lessons -->
+        <label>Lessons Completed:</label>
+        <p>@Model.LessonsCompleted</p>
+    </div>
+    <!-- Button to return to the home page -->
+    <a href="@Url.Action("Index", "Home")">Back to Home</a>
+    
+</div>
+</body>
+</html>

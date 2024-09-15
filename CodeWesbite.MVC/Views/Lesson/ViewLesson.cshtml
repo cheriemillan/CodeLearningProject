@@ -1,0 +1,92 @@
+﻿<!-- View for displaying a specific lesson -->
+@model CodeWebsiteProject.Lesson
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Model.Title</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Ravensara Sans, sans-serif;
+            background-color: #f9f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #ffcad4;
+            color: #89023e;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Lesson title */
+        h1 {
+            color: #4a4e69;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Lesson content */
+        p {
+            color: #22223b;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Complete lesson button styling */
+        .btn {
+            background-color: #deb3fe;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 40px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .btn:hover {
+            background-color: #e7c6fe;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1><strong>@Model.Title</strong></h1>
+        <p>@Html.Raw(Model.Content)</p>
+        <!-- Create a button link to the AllLessonsCompleted action of the Lesson controller
+        with the current lesson index passed as a route parameter via ViewBag -->
+        <a href="@Url.Action("AllLessonsCompleted", "Lesson", new { lessonIndex = ViewBag.LessonIndex })" class="btn">
+            Complete Lesson
+        </a>
+    </div>
+</header>
+<div>
+
+</div>
+</body>
+</html>
