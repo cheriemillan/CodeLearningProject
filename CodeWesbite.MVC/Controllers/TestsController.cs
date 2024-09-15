@@ -95,10 +95,9 @@ public class TestsController : Controller
         }
         
         var progress = _progressRepo.GetProgress(userId) ?? new Progress { UserId = userId };
+        
         var test = tests[testIndex];  // Get the current test
         
-        System.Diagnostics.Debug.WriteLine($"TestIndex: {testIndex}, SelectedChoice: {selectedChoice}, CorrectOption: {test.TestCorrectOption}");
-
         // Check if the answer is correct
         if (selectedChoice  == test.TestCorrectOption)
         {

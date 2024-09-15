@@ -63,3 +63,4 @@ C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWesbite.MVC\bin\Deb
 C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWesbite.MVC\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWesbite.MVC\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWesbite.MVC\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\cheri\OneDrive\Desktop\repos\CodeWebsiteProject\CodeWesbite.MVC\obj\Debug\net8.0\CodeWesbite.MVC.sourcelink.json

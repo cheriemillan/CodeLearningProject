@@ -32,7 +32,7 @@ public class QuizController : Controller
             },
             new Quiz
             {
-                Question = "For reference types can two variables reference the same reference?", Options = new []{"True","False"}, CorrectOption = 1
+                Question = "For reference types can two variables reference the same reference?", Options = new []{"True","False"}, CorrectOption = 0
             },
             new Quiz
             {
